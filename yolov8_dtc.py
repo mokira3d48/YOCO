@@ -177,12 +177,13 @@ class TrackingCounter:
 			# cv.putText(frame, ('1line'), (274, 318), cv.FONT_HERSHEY_COMPLEX, 0.8, (0, 255, 255), 2)
 			# cv.putText(frame, ('2line'), (181, 363), cv.FONT_HERSHEY_COMPLEX, 0.8, (0, 255, 255), 2)
 			cv.putText(
-				frame,
-				('vh count:' + str(count)),
-				(60, 40),
-				cv.FONT_HERSHEY_COMPLEX,
-				0.8, (0, 127, 0), 2
-			)
+				img=frame,
+				text=('vh count:' + str(count)),
+				org=(60, 40),
+				fontFace=cv.FONT_HERSHEY_COMPLEX,
+				fontScale=0.8,
+				color=(0, 127, 0),
+				thickness=2)
 			# LOG.debug('vh_down: ' + str(vh_down))
 			LOG.debug("indexes: " + str(count))
 
